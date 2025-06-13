@@ -7,9 +7,7 @@ Este é um guia passo a passo para testar a aplicação Spring Boot `ProjetoJava
 - **Maven**: Instale o Maven para compilar e executar o projeto.
 - **Postman**: Instale o Postman para enviar requisições HTTP.
 - **Aplicação Rodando**: Execute o projeto localmente usando sua IDE (ex.: IntelliJ ou Eclipse) ou com o comando `mvn spring-boot:run` no terminal.
-
 ---
-
 ## Passo a Passo para Testar Tudo
 
 ### Passo 1: Testar o Registro de Usuário (`/api/auth/register`)
@@ -39,7 +37,6 @@ Este é um guia passo a passo para testar a aplicação Spring Boot `ProjetoJava
    - Acesse [jwt.io](https://jwt.io), cole o token na seção "Encoded" e confirme:
      - `sub`: Deve ser `user@teste.com`.
      - `role`: Deve ser `USER`.
-     - `exp`: Deve estar a 24 horas a partir do horário atual.
 
 5. **Nota**: Se o email já existir, use um novo email (ex.: `user2@teste.com`) e tente novamente.
 
@@ -126,4 +123,3 @@ Este é um guia passo a passo para testar a aplicação Spring Boot `ProjetoJava
 - **Passo 3**: Acesso permitido para endpoints de usuário com token válido.
 - **Passo 4**: Acesso permitido para endpoints de admin com token de admin, negado com token de usuário.
 - **Passo 5**: Falha de autenticação sem token ou com token inválido.
-- **Passo 6**: Logs consistentes sem erros.
