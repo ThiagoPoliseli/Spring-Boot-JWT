@@ -1,4 +1,4 @@
-Este é um guia passo a passo para testar a aplicação Spring Boot `ProjetoJavaApplication`, que implementa autenticação e autorização baseadas em JWT com endpoints para registro, login e acesso protegido. A aplicação utiliza H2 como banco de dados em memória e roda localmente em `http://localhost:8080`. Siga as instruções abaixo para testar todas as funcionalidades.
+Este é um guia passo a passo para testar a aplicação Spring Boot `ProjetoJavaApplication`, que implementa autenticação e autorização baseadas em JWT com endpoints para registro, login e acesso protegido. A aplicação roda localmente em `http://localhost:8080`. Siga as instruções abaixo para testar todas as funcionalidades.
 
 ---
 
@@ -42,7 +42,7 @@ Este é um guia passo a passo para testar a aplicação Spring Boot `ProjetoJava
 
 ---
 
-### Passo 2: Testar o Login (`/api/auth/login`)
+### Passo 2: Para Testar o Login (`/api/auth/login`)
 1. **Abra o Postman**:
    - Selecione o método **POST**.
    - Insira a URL: `http://localhost:8080/api/auth/login`.
@@ -60,7 +60,7 @@ Este é um guia passo a passo para testar a aplicação Spring Boot `ProjetoJava
 
 3. **Envie a Requisição**:
    - Clique em **Send**.
-   - **Resultado Esperado**: Status **200 OK** com um novo token JWT no corpo da resposta.
+   - **Resultado Esperado**: Status **200 OK** com um novo token JWT no corpo da resposta(No terminal).
 
 4. **Verifique o Token**:
    - Copie o token e decodifique em [jwt.io](https://jwt.io).
@@ -71,7 +71,7 @@ Este é um guia passo a passo para testar a aplicação Spring Boot `ProjetoJava
 ### Passo 3: Testar Acesso a Endpoint Protegido para Usuário (`/api/user/**`)
 1. **Abra o Postman**:
    - Selecione o método **GET**.
-   - Insira a URL: `http://localhost:8080/api/user/profile` (ajuste se o endpoint for diferente).
+   - Insira a URL: `http://localhost:8080/api/user/profile`.
 
 2. **Adicione o Token no Cabeçalho**:
    - Vá para a aba **Headers**.
@@ -90,7 +90,7 @@ Este é um guia passo a passo para testar a aplicação Spring Boot `ProjetoJava
 ### Passo 4: Testar Acesso a Endpoint Protegido para Admin (`/api/admin/**`)
 1. **Abra o Postman**:
    - Selecione o método **GET**.
-   - Insira a URL: `http://localhost:8080/api/admin/users` (ajuste se o endpoint for diferente).
+   - Insira a URL: `http://localhost:8080/api/admin/users`.
 
 2. **Adicione o Token no Cabeçalho**:
    - Vá para a aba **Headers**.
